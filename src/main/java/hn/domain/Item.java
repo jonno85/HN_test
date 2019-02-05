@@ -153,7 +153,7 @@ public class Item {
         return new StringBuffer("Item: { ")
                 .append("id="+id)
                 .append(" title="+title)
-                .append(" tyime="+time.toEpochSecond())
+                .append(" time="+time.toEpochSecond())
                 .append(" }")
                 .toString();
 
@@ -165,7 +165,7 @@ public class Item {
             .append("id="+id)
             .append(" text="+text)
             .append(" type="+type)
-            .append(" tyime="+time.toEpochSecond())
+            .append(" time="+time.toEpochSecond())
             .append(" }")
             .toString();
             

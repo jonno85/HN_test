@@ -97,7 +97,6 @@ public class BaseService {
         log.info("getTop10titlesLastWeek checked min last {} {} {}", min, lastItem.getId(), lastItem.getId() - min);
 
         List<Integer> itemsIdToRetrieve = IntStream.range(min, lastItem.getId() -1).boxed().collect(Collectors.toList());
-        Predicate<Item> noFilter = i -> true;
         List<String> missingItems = getItemsTitle(itemsIdToRetrieve);
 
         log.info("getTop10titlesLastWeek missing items {}", missingItems.size());
@@ -208,7 +207,7 @@ public class BaseService {
                         .map(CompletableFuture::join)
                         .collect(Collectors.toList());
 
-        log.info("getItemsTitle joined");
+        log.info("getItemsTitleForKarmaUser joined");
         return result;
     }
 
